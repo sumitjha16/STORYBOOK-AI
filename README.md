@@ -83,6 +83,8 @@ graph TD
   * 🐍 Slytherin (Green/Silver)
   * 🦡 Hufflepuff (Yellow/Black)
   * 🦅 Ravenclaw (Blue/Bronze)
+* Freeform/Structure mode toggle
+  
 
 ### Key React Components
 
