@@ -1,7 +1,8 @@
 # 🧙‍♂️ Storybook AI - Harry Potter Knowledge Assistant
 
 [![Live Demo](https://img.shields.io/badge/Demo-Live-green?style=for-the-badge)](https://storybookharry.netlify.app)  
-![Interface Preview]([https://sumitjha.sirv.com/harry/image_2025-04-13_010231709.png])
+![Interface Preview](https://sumitjha.sirv.com/harry/image_2025-04-13_010231709.png)
+
 Link - https://storybookharry.netlify.app/
 ## 🌟 Features
 
