@@ -1,0 +1,33 @@
+# Core dependencies
+fastapi
+uvicorn
+pydantic
+python-dotenv
+
+# LLM and RAG
+langchain-chroma
+langchain_huggingface
+langchain
+langchain-community
+chromadb
+transformers
+sentence-transformers
+pypdf
+ctransformers
+huggingface-hub
+accelerate
+bitsandbytes
+einops
+
+
+
+# Monitoring
+prometheus-fastapi-instrumentator
+prometheus-client
+
+# Testing
+pytest
+httpx
+
+# Production
+gunicorn

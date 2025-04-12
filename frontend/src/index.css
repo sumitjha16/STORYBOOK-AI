@@ -1,0 +1,113 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: 'Harry Potter';
+    src: url('https://db.onlinewebfonts.com/t/0421d4186d6efbfc5331fe180895e780.woff2') format('woff2');
+  }
+
+  body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    transition: background-image 0.5s ease-in-out;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Harry Potter', serif;
+  }
+}
+
+.house-gryffindor {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('https://sumitjha.sirv.com/harry/gry.jpg');
+}
+
+.house-slytherin {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('https://sumitjha.sirv.com/harry/sly.jpg');
+}
+
+.house-ravenclaw {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('https://sumitjha.sirv.com/harry/Rav.jpg');
+}
+
+.house-hufflepuff {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('https://sumitjha.sirv.com/harry/huf.jpg');
+}
+
+.magical-blur {
+  backdrop-filter: blur(8px);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.magical-input {
+  @apply px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm transition-all duration-300;
+  max-width: 100%; /* Ensure inputs don't overflow */
+  word-wrap: break-word; /* Allow long words to break */
+}
+
+.magical-input:focus {
+  @apply ring-2 ring-offset-2 ring-opacity-50;
+}
+
+.house-gryffindor .magical-input:focus {
+  @apply ring-red-500;
+}
+
+.house-slytherin .magical-input:focus {
+  @apply ring-green-500;
+}
+
+.house-ravenclaw .magical-input:focus {
+  @apply ring-blue-500;
+}
+
+.house-hufflepuff .magical-input:focus {
+  @apply ring-yellow-500;
+}
+
+.magical-button {
+  @apply px-6 py-2 rounded-lg transition-all duration-300 transform hover:scale-105 text-white;
+  min-width: fit-content; /* Ensure buttons don't shrink too much */
+}
+
+.house-gryffindor .magical-button {
+  @apply bg-gradient-to-r from-red-700 to-yellow-500;
+}
+
+.house-slytherin .magical-button {
+  @apply bg-gradient-to-r from-green-800 to-green-500;
+}
+
+.house-ravenclaw .magical-button {
+  @apply bg-gradient-to-r from-blue-800 to-bronze-400;
+}
+
+.house-hufflepuff .magical-button {
+  @apply bg-gradient-to-r from-yellow-400 to-yellow-600;
+}
+
+.magical-card {
+  @apply rounded-lg shadow-xl backdrop-blur-md bg-white/10 dark:bg-gray-800/10 border border-white/10 transition-all duration-300;
+  max-width: 100%; /* Ensure cards don't overflow */
+  overflow-wrap: break-word; /* Allow long words to break */
+}
+
+/* Media queries for mobile responsiveness */
+@media (max-width: 640px) {
+  .magical-button {
+    @apply px-4 py-2; /* Smaller padding on mobile */
+  }
+  
+  .magical-input {
+    @apply px-3 py-2; /* Smaller padding on mobile */
+  }
+}
