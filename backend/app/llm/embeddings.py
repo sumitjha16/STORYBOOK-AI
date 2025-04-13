@@ -3,7 +3,6 @@ import logging
 from pathlib import Path
 from functools import lru_cache
 from langchain_huggingface import HuggingFaceEmbeddings
-# Updated import for Chroma
 from langchain_chroma import Chroma
 from app.core.config import get_settings
 
