@@ -1,15 +1,14 @@
-// hooks/useTheme.ts
 import { useState, useEffect } from 'react';
 import { House } from '../types';
 
 export function useTheme() {
   const [theme, setTheme] = useState<'light' | 'dark'>(() => {
-    // Check for saved theme preference or use dark as default
+    
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme === 'light' || savedTheme === 'dark') {
       return savedTheme;
     }
-    // Use dark as fallback instead of system preference
+    
     return 'dark';
   });
 
