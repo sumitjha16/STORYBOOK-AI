@@ -1,7 +1,6 @@
 import logging
 from typing import List, Tuple, Dict, Any
 from functools import lru_cache
-# Updated imports for LangChain
 from langchain.chains import ConversationalRetrievalChain
 from langchain.memory import ConversationBufferWindowMemory
 from langchain.prompts import PromptTemplate
@@ -21,7 +20,7 @@ class RAGChain:
         self.retriever = self.vector_store.as_retriever(
             search_kwargs={"k": settings.RETRIEVAL_K}
         )
-        # Fix memory configuration with output_key specification
+        #memory configuration with output_key specification
         self.memory = ConversationBufferWindowMemory(
             memory_key="chat_history",
             return_messages=True,
@@ -32,7 +31,7 @@ class RAGChain:
     def get_conversation_chain(self, response_mode: str = "freeform"):
         system_prompt = get_system_prompt(response_mode)
 
-        # Use the predefined chat prompt template from prompts.py
+        # predefined chat prompt template from prompts.py
         prompt = get_chat_prompt_template()
 
         chain = ConversationalRetrievalChain.from_llm(
@@ -49,9 +48,9 @@ class RAGChain:
         logger.info(f"Generating response for query: {query}")
         chain = self.get_conversation_chain(response_mode)
 
-        # Execute the chain using the updated invoke method
+        # Executing the chain using the updated invoke method
         try:
-            # Replace chain() call with chain.invoke()
+           
             result = chain.invoke({"question": query})
 
             # Extract answer and sources
@@ -68,7 +67,6 @@ class RAGChain:
         logger.info(f"Generating {summary_type} summary for: {summary_target}")
 
         try:
-            # Form a better retrieval query
             retrieval_query = f"{summary_type} {summary_target} Harry Potter"
             docs = self.retriever.get_relevant_documents(retrieval_query)
 
@@ -78,7 +76,7 @@ class RAGChain:
             context = "\n\n".join([doc.page_content for doc in docs])
             system_prompt = get_system_prompt(response_mode)
 
-            # Use the summarization prompt template
+            # summarization prompt template
             prompt_template = get_summarization_prompt_template()
             prompt_values = {
                 "system_prompt": system_prompt,
@@ -87,7 +85,7 @@ class RAGChain:
                 "summary_target": summary_target
             }
             
-            # Format the prompt and send to LLM
+            # Formatting the prompt and send to LLM
             prompt_text = prompt_template.format(**prompt_values)
             response = self.llm(prompt_text)
             sources = [doc.metadata.get("source", "Unknown") for doc in docs]
