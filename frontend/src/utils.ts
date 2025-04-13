@@ -11,7 +11,6 @@ function processBoldText(text: string): string {
   return text.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
 }
 
-// Improved structured content formatter with consistent styling
 export function formatStructuredContent(content: string): string {
   // Split the content by double newlines to separate sections
   const sections = content.split('\n\n');
