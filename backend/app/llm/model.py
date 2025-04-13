@@ -62,7 +62,7 @@ class MistralLLM(LLM):
 
 @lru_cache()
 def get_llm_model():
-    api_key = os.environ.get("MISTRAL_API_KEY", "v1gJpcCMIjJSXTBCcxO8GjmzhknuCMBt")
+    api_key = os.environ.get("MISTRAL_API_KEY")
     if not api_key:
         logger.error("API key not found")
         raise ValueError("API key not set")
