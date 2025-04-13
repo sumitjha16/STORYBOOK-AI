@@ -10,7 +10,7 @@ Link - https://storybookharry.netlify.app/
 - **Dual Response Modes**: 
   - 🎩 Freeform (storytelling style)
   - 📚 Structured (organized bullet points)
-- **Chapter Summarization**: Characters, Events, Spells
+- **Summarization**: Characters, Events, Spells and Many more
 - **Contextual Memory**: Remembers conversation history
 - **Streaming Responses**: Real-time answer generation
 - **Source Citations**: Shows book/chapter references
