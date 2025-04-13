@@ -48,7 +48,7 @@ function App() {
     } catch (error) {
       console.error('Error sending message:', error);
       
-      // Add error message
+  
       const errorMessage: Message = {
         id: (Date.now() + 1).toString(),
         content: 'Sorry, something went wrong with the magic. Please try again later.',
@@ -87,7 +87,6 @@ function App() {
       const titleMatch = contentLines[0].match(/\*\*(.*?)\*\*/);
       const title = titleMatch ? titleMatch[1] : `${request.type}: ${request.target}`;
       
-      // Remove the first line (title) from content
       const content = contentLines.slice(1).join('\n').trim();
       
       const mockSummary: SummaryType = {
@@ -116,10 +115,9 @@ function App() {
       <div className="min-h-screen bg-transparent text-gray-900 dark:text-gray-100">
         <Header />
         
-        {/* This is a spacer div that takes up the same height as the header */}
+       
         <div className="h-24"></div>
         
-        {/* Main content container that starts after the header */}
         <main className="container mx-auto px-4 py-8">
           <div className="flex flex-col lg:grid lg:grid-cols-3 gap-8">
             <div className="lg:col-span-2 h-[calc(100vh-10rem)] w-full">
