@@ -6,10 +6,10 @@
 Link - https://storybookharry.netlify.app/
 ## 🌟 Features
 
--**Magical Chat**: Have conversations in the Harry Potter universe with Remembering conversation history
--**Encyclopedia**: Get detailed information about characters, chapters, events, locations, spells, and houses
--**House Themes**: Switch between Gryffindor, Slytherin, Ravenclaw, and Hufflepuff themes
-**Light/Dark Mode**: Toggle between "Lumos" (light) and "Nox" (dark) modes
+- **Magical Chat**: Have conversations in the Harry Potter universe with Remembering conversation history
+- **Encyclopedia**: Get detailed information about characters, chapters, events, locations, spells, and houses
+- **House Themes**: Switch between Gryffindor, Slytherin, Ravenclaw, and Hufflepuff themes
+- **Light/Dark Mode**: Toggle between "Lumos" (light) and "Nox" (dark) modes
 - **Dual Response Modes**: 
   - 🎩 Freeform (storytelling style)
   - 📚 Structured (organized bullet points)es
