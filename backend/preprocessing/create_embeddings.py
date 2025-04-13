@@ -1,4 +1,3 @@
-# backend/create_embeddings.py
 import os
 import json
 from langchain.text_splitter import RecursiveCharacterTextSplitter
@@ -70,7 +69,7 @@ def create_vector_store(chunks, persist_directory):
 
 def main():
     # Paths
-    data_dir = r"C:\Users\sumit jha\Desktop\codes\Storybook\backend\data\processed"
+    data_dir = "..\data\processed"
     chapters_path = os.path.join(data_dir, "all_chapters.json")
     vector_store_dir = os.path.join(data_dir, "chroma_db")
 
