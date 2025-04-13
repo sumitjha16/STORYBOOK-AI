@@ -146,6 +146,7 @@ python create_embeddings.py
 ### 4. API URL Update
 * Update the API_BASE_URL in frontend/src/api.ts to point to your backend URL
 * Similarly in backend/app/main.py , update frontend URL to avoid CORS error
+* Ensure all the paths are appropriate in backend/app/core/config.py
 
 ### 5. Run Services
 
