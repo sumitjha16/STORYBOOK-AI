@@ -1,5 +1,4 @@
-// api.ts - Update the API paths to include /api prefix and improve error handling
-const API_BASE_URL = 'https://harrybackend.onrender.com';
+const API_BASE_URL = 'https://harrybackend.onrender.com'; //post cloning change it with your backend URL
 
 export const api = {
   healthCheck: async (): Promise<HealthResponse> => {
@@ -41,7 +40,6 @@ export const api = {
       });
 
       if (!response.ok) {
-        // Try to get the detailed error message from the response
         const errorData = await response.json().catch(() => ({}));
         console.error('Summary request failed:', response.status, errorData);
         throw new Error(`Failed to generate summary: ${JSON.stringify(errorData)}`);
