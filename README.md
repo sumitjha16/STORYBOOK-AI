@@ -169,13 +169,13 @@ npm start
 5. Embedding Generation
 6. Vector Storage (ChromaDB)
 
-## ⚡ Performance Tips
+## ⚡ Performance Enhancement
 
-* Use DEBUG=False in production
+* DEBUG=False in production
 * Enable response caching
 * Limit conversation history length
-* Use smaller embedding model
-* Implement rate limiting
+* smaller embedding model
+* rate limiting
 
 ## 🚨 Troubleshooting
 
