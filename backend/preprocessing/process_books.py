@@ -1,4 +1,3 @@
-# backend/process_books.py
 import os
 import re
 import json
