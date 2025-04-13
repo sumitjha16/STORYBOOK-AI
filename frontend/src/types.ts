@@ -1,4 +1,3 @@
-// types.ts - Updated with proper backend integration types
 import { ReactNode } from 'react';
 
 export type House = 'gryffindor' | 'slytherin' | 'ravenclaw' | 'hufflepuff';
@@ -23,7 +22,7 @@ export interface ChatResponse {
   sources: string[];
 }
 
-// Added 'spell' and 'house' to summary request types
+
 export interface SummaryRequest {
   type: 'chapter' | 'character' | 'event' | 'location' | 'spell' | 'house';
   target: string;
