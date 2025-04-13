@@ -24,7 +24,7 @@ class RAGChain:
         self.memory = ConversationBufferWindowMemory(
             memory_key="chat_history",
             return_messages=True,
-            output_key="answer",  # Specify which key to store in memory
+            output_key="answer",  # Specifying key to store in memory
             k=5  # Keep only the last 5 exchanges for efficiency
         )
 
