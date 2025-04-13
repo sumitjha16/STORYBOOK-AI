@@ -90,7 +90,6 @@ graph TD
 ### Key React Components
 
 * Streaming response handler
-* Source citation parser
 * Dynamic theme switcher
 * Summary typeahead search
 
