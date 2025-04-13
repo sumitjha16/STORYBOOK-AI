@@ -6,14 +6,14 @@
 Link - https://storybookharry.netlify.app/
 ## 🌟 Features
 
-- **Book-Specific Knowledge**: Answers from HP Books 1-4 only
+-**Magical Chat**: Have conversations in the Harry Potter universe with Remembering conversation history
+-**Encyclopedia**: Get detailed information about characters, chapters, events, locations, spells, and houses
+-**House Themes**: Switch between Gryffindor, Slytherin, Ravenclaw, and Hufflepuff themes
+**Light/Dark Mode**: Toggle between "Lumos" (light) and "Nox" (dark) modes
 - **Dual Response Modes**: 
   - 🎩 Freeform (storytelling style)
-  - 📚 Structured (organized bullet points)
-- **Summarization**: Characters, Events, Spells and Many more
-- **Contextual Memory**: Remembers conversation history
-- **Streaming Responses**: Real-time answer generation
-- **Source Citations**: Shows book/chapter references
+  - 📚 Structured (organized bullet points)es
+- **Book-Specific Knowledge**: Answers from HP Books 1-4 only
 
 ## 🏰 High-Level Architecture
 
@@ -99,6 +99,7 @@ graph TD
 
 * Python 3.10+
 * Node.js 16+
+* React, TypeScript
 * Mistral API Key
 * 8GB+ RAM recommended
 
@@ -140,6 +141,11 @@ CHROMA_DB_DIR=./data/processed/chroma_db
 python process_books.py
 python create_embeddings.py
 ```
+* Or use preprocessed stored embeddings
+
+### 4. API URL Update
+* Update the API_BASE_URL in frontend/src/api.ts to point to your backend URL
+* Similarly in backend/app/main.py , update frontend URL to avoid CORS error
 
 ### 5. Run Services
 
