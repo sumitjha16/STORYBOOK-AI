@@ -57,7 +57,7 @@ graph TD
 | RAG Engine | LangChain, ChromaDB | Context retrieval |
 | LLM | Mistral-7B | Response generation |
 | Embeddings | all-MiniLM-L6-v2 | Text vectorization |
-| Monitoring | Prometheus, Grafana | Performance tracking |
+| Monitoring | Prometheus | Performance tracking |
 
 ## 📡 API Endpoints
 
