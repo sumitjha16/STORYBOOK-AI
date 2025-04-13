@@ -98,7 +98,6 @@ graph TD
 ### Prerequisites
 
 * Python 3.10+
-* Node.js 16+
 * React, TypeScript
 * Mistral API Key
 * 8GB+ RAM recommended
