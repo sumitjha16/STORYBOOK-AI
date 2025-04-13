@@ -112,12 +112,12 @@ async def clear_memory():
 
 
 async def generate_streaming_response(query: str, response_mode: str):
-    """Generate streaming response with more robust handling"""
+    """Generate streaming response handling"""
     rag_chain = get_rag_chain()
     logger.info(f"Starting streaming response for query: {query}")
     
     try:
-        # Send the initial "thinking" indicator
+       
         yield "data: Thinking...\n\n"
         await asyncio.sleep(0.2)
         
