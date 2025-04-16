@@ -177,12 +177,3 @@ def update_metrics(operation: str, input_length: int):
     memory_info = psutil.Process().memory_info()
     MEMORY_USAGE.set(memory_info.rss)
 
-def update_metrics(operation: str, input_length: int):
-    """Update metrics after response generation"""
-    # Track token count (rough estimate)
-    estimated_tokens = input_length // 4
-    TOKEN_COUNT.labels(operation=operation).inc(estimated_tokens)
-
-    # Track memory usage
-    memory_info = psutil.Process().memory_info()
-    MEMORY_USAGE.set(memory_info.rss)
